@@ -1,0 +1,224 @@
+{
+    "gpu" : {
+        "description" : "enable gpu or not", 
+        "value" : 1
+        },
+    "use_rl" : {
+        "description" : "whether use RL to optimize placement", 
+        "value" : 0
+        },
+    "num_bins_x" : {
+        "description" : "number of bins in horizontal direction; computed by internal heuristic if not specified", 
+        "value" : 1024
+        },
+    "num_bins_y" : {
+        "description" : "number of bins in vertical direction; computed by internal heuristic if not specified", 
+        "value" : 1024
+        },
+    "global_place_stages" : {
+        "description" : "global placement configurations of each stage, a dictionary of {\"num_bins_x\", \"num_bins_y\", \"iteration\", \"learning_rate\", \"learning_rate_decay\", \"wirelength\", \"optimizer\", \"Llambda_density_weight_iteration\", \"Lsub_iteration\", \"routability_Lsub_iteration\",}", 
+        "value" : [{"num_bins_x" : 1024, "num_bins_y" : 1024, "iteration" : 1000, "learning_rate" : 0.01, "learning_rate_decay" : 1.0, "wirelength" : "weighted_average", "optimizer" : "nesterov", "Llambda_density_weight_iteration" : 1, "Lsub_iteration" : 1, "routability_Lsub_iteration" : 1}], 
+        "required" : "required"
+        },
+    "use_bb" : {
+        "descripton" : "whether use bb step", 
+        "default" : 0
+        },
+    "target_density" : {
+        "description" : "target density", 
+        "value" : 1.0
+        },
+    "density_weight" : {
+        "description" : "initial weight of density cost", 
+        "value" : 8e-5
+        },
+    "update_density_weight" : {
+        "description" : "whether update_density_weight", 
+        "value" : 1
+        },
+    "use_rudy_map" : {
+        "description" : "whether use_rudy_map to compute eletric force", 
+        "value" : 0
+        }, 
+    "rudy_net_threhold" : {
+        "description" : "if net congestion greater than rudy_net_threhold density will consider net congestion", 
+        "value" : 5
+        },
+    "random_seed" : {
+        "description" : "random seed", 
+        "value" : 1000
+        },
+    "scale_factor" : {
+        "description" : "scale factor to avoid numerical overflow; 0.0 means not set", 
+        "value" : 1.0
+        },
+    "shift_factor" : {
+        "description" : "shift factor to avoid numerical issues when the lower-left origin of rows is not (0, 0);", 
+        "value" : [0.0, 0.0]
+        },
+    "ignore_net_degree" : {
+        "description" : "ignore net degree larger than some value", 
+        "value" : 100
+        },
+    "enable_fillers" : {
+        "description" : "enable filler cells", 
+        "value" : 0
+        },
+    "global_place_flag" : {
+        "description" : "whether use global placement", 
+        "value" : 1
+        },
+    "legalize_flag" : {
+        "description" : "whether use internal legalization", 
+        "value" : 1
+        },
+    "detailed_place_flag" : {
+        "description" : "whether use internal detailed placement", 
+        "value" : 0
+        },
+    "stop_overflow" : {
+        "description" : "stopping criteria, consider stop when the overflow reaches to a ratio", 
+        "value" : 0.0
+        },
+    "dtype" : {
+        "description" : "data type, float32 | float64", 
+        "value" : "float32"
+        },
+    "plot_flag" : {
+        "description" : "whether plot solution or not", 
+        "value" : 1
+        },
+    "gif_flag" : {
+        "description" : "whether generate a gif or not", 
+        "value" : 1
+        },
+    "metric_plot_flag" : {
+        "description" : "whether plot metric", 
+        "value" : 1
+        },
+    "plot_map_flag" : {
+        "description" : "whether plot map in electric force map ", 
+        "value" : 0
+        },
+    "RePlAce_ref_hpwl" : {
+        "description" : "reference HPWL used in RePlAce for updating density weight", 
+        "value" : 1500
+        },
+    "RePlAce_LOWER_PCOF" : {
+        "description" : "lower bound ratio used in RePlAce for updating density weight", 
+        "value" : 0.95
+        },
+    "RePlAce_UPPER_PCOF" : {
+        "description" : "upper bound ratio used in RePlAce for updating density weight", 
+        "value" : 1.05
+        },
+    "gamma" : {
+        "description" : "base coefficient for log-sum-exp and weighted-average wirelength, a relative value to bin size",
+        "value" : 4.0
+        },
+    "RePlAce_skip_energy_flag" : {
+        "description" : "whether skip density energy computation for fast mode, may not work with some solvers", 
+        "value" : 1
+        },
+    "random_center_init_flag" : {
+        "description" : "whether perform random initialization around the center for global placement", 
+        "value" : 1
+        },
+    "sort_nets_by_degree" : {
+        "description" : "whether sort nets by degree or not", 
+        "value" : 0
+        },
+    "num_threads" : {
+        "description" : "number of CPU threads", 
+        "value" : 8
+        },
+    "routability_opt_flag" : {
+        "description" : "whether enable routability optimization", 
+        "value" : 0
+        }, 
+    "route_num_bins_x" : {
+        "description" : "number of routing grids/tiles", 
+        "value" : 1024
+        },
+    "route_num_bins_y" : {
+        "description" : "number of routing grids/tiles", 
+        "value" : 1024
+        },
+    "node_area_adjust_overflow" : {
+        "description" : "the overflow where to adjust node area", 
+        "value" : 0.15
+        },
+    "max_num_area_adjust" : {
+        "description" : "maximum times to adjust node area", 
+        "value" : 3
+        },
+    "adjust_rudy_area_flag" : {
+        "description" : "whether use RUDY/RISA map to guide area adjustment", 
+        "value" : 0
+        },
+    "adjust_pin_area_flag" : {
+        "description" : "whether use pin utilization map to guide area adjustment", 
+        "value" : 0
+        },
+    "area_adjust_stop_ratio" : {
+        "description" : "area_adjust_stop_ratio", 
+        "value" : 0.01
+        },
+    "route_area_adjust_stop_ratio" : {
+        "description" : "route_area_adjust_stop_ratio", 
+        "value" : 0.01
+        },
+    "pin_area_adjust_stop_ratio" : {
+        "description" : "pin_area_adjust_stop_ratio", 
+        "value" : 0.05
+        },
+    "unit_horizontal_capacity" : {
+        "description" : "number of horizontal routing tracks per unit distance", 
+        "value" : 1.5625
+        },
+    "unit_vertical_capacity" : {
+        "description" : "number of vertical routing tracks per unit distance", 
+        "value" : 1.45
+        },
+    "unit_pin_capacity" : {
+        "description" : "number of pins per unit area", 
+        "value" : 0.058
+        },
+    "max_route_opt_adjust_rate" : {
+        "description" : "max_route_opt_adjust_rate", 
+        "value" : 2.0
+        },
+    "route_opt_adjust_exponent" : {
+        "description" : "exponent to adjust the routing utilization map", 
+        "value" : 2.0
+        },
+    "pin_stretch_ratio" : {
+        "description" : "pin_stretch_ratio", 
+        "value" : 1.414213562
+        },
+    "max_pin_opt_adjust_rate" : {
+        "description" : "max_pin_opt_adjust_rate", 
+        "value" : 1.5
+        }, 
+    "deterministic_flag" : {
+        "description" : "whether require run-to-run determinism, may have efficiency overhead", 
+        "value" : 0
+        },
+    "row_height" : {
+        "description" : "a row's height", 
+        "value" : 0.01
+        }, 
+    "site_width" : {
+        "description" : "a site's width", 
+        "value" : 0.01
+        },
+    "test_hpwl_flag" : {
+        "description" : "test hpwl if compute correct", 
+        "value" : 0
+        },
+    "write_back_flag" : {
+        "description" : "whether write back to pcb", 
+        "value" : 1
+        }     
+    }
+    

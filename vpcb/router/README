@@ -1,0 +1,13 @@
+# router
+currently support kicad_v7
+
+input: (.kicad_pcb) (.kicad_pro) (.dsn)
+    - board outline
+    - component footprints
+    - netlist
+    - design rules
+
+
+output: (.kiad_pcb) (.ses)
+    - wire segments of net
+    - vias of net

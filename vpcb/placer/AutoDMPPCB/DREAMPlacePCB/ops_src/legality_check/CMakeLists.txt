@@ -1,0 +1,18 @@
+set(OP_NAME legality_check)
+
+set(TARGET_NAME ${OP_NAME})
+
+set(INCLUDE_DIRS 
+  ${CMAKE_CURRENT_SOURCE_DIR}/..
+  )
+
+set(LINK_LIBS utility_cxx
+  OpenMP::OpenMP_CXX
+  )
+
+add_pytorch_extension(${TARGET_NAME}_cpp 
+  src/legality_check.cpp
+  EXTRA_INCLUDE_DIRS ${INCLUDE_DIRS}
+  EXTRA_LINK_LIBRARIES ${LINK_LIBS})
+
+install(TARGETS ${TARGET_NAME}_cpp DESTINATION ops/${OP_NAME}) 

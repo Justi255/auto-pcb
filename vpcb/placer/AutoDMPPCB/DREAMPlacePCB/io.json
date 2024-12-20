@@ -1,0 +1,10 @@
+{
+"pcb_input" : {
+    "description" : "the pcb design file input", 
+    "value" : "../../../../examples/test_data/bm7/bm7.unrouted.kicad_pcb"
+    }, 
+"result_dir" : {
+    "description" : "result directory for output", 
+    "value" : "output"
+    }
+}

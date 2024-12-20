@@ -1,0 +1,19 @@
+{
+"placer":{
+    "description" : "the pcb placer: DREAMPlacePCB, ADSAPlace, pltools", 
+    "value" : "pltools"
+    },
+"router":{
+    "description" : "the pcb router: autorouting_fr", 
+    "value" : "no_route"
+    },
+
+"pcb_input" : {
+    "description" : "the pcb design file input", 
+    "value" : "../examples/test_data/bm7/bm7.unrouted.kicad_pcb"
+    }, 
+"result_dir" : {
+    "description" : "result directory for output", 
+    "value" : "../../output/"
+    }
+}

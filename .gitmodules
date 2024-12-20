@@ -1,0 +1,12 @@
+[submodule "vpcb/placer/DREAMPlacePCB/thirdparty/Limbo"]
+	path = vpcb/placer/DREAMPlacePCB/thirdparty/Limbo
+	url = https://github.com/limbo018/Limbo.git
+[submodule "vpcb/placer/DREAMPlacePCB/thirdparty/cub"]
+	path = vpcb/placer/DREAMPlacePCB/thirdparty/cub
+	url = https://github.com/NVlabs/cub.git
+[submodule "vpcb/placer/DREAMPlacePCB/thirdparty/munkres-cpp"]
+	path = vpcb/placer/DREAMPlacePCB/thirdparty/munkres-cpp
+	url = https://github.com/saebyn/munkres-cpp.git
+[submodule "vpcb/placer/DREAMPlacePCB/thirdparty/pybind11"]
+	path = vpcb/placer/DREAMPlacePCB/thirdparty/pybind11
+	url = https://github.com/pybind/pybind11.git

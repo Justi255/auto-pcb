@@ -1,0 +1,27 @@
+name: Build-test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+
+  DREAMPlacePCB-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v4
+##TODO:container not work for too large
+    # - name: Run the Container
+    #   id: run
+    #   run: |
+    #     docker run --rm auto-pcb:cuda echo "run test finished"

@@ -1,0 +1,13 @@
+# placer
+currently support kicad_v7
+
+input: (.kicad_pcb)
+    - board outline
+    - component footprints
+    - netlist
+
+
+
+output: (.kicad_pcb)
+    - positions of components 
+    - angles between components

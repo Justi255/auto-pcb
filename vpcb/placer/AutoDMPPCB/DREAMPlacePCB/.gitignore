@@ -1,0 +1,10 @@
+build
+lib
+include
+output
+*.o
+*.a
+*.so
+
+
+
